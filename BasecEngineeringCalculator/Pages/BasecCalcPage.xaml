@@ -70,7 +70,7 @@
         <Button Grid.Column="2" Grid.Row="6" Content="%" Style="{StaticResource ButtonStyle}"/>
 
         <Button Grid.Column="2" Grid.Row="2" Content="⌫" Click="Button_Click_Clean_Last" Style="{StaticResource ButtonStyle}"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="C" Click="Button_Click_Clear" Style="{StaticResource ButtonStyle}"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="C" Click="Button_Click_Clear_All" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Column="0" Grid.Row="2" Content="CE" Click="Button_Click_Clear" Style="{StaticResource ButtonStyle}"/>
         <Button Grid.Column="0" Grid.Row="7" Content="," Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
 

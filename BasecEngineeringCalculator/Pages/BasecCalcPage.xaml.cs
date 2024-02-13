@@ -41,6 +41,13 @@ namespace BasecEngineeringCalculator.Pages
         private void Button_Click_Clear(object sender, RoutedEventArgs e)
         {
             txtBox.Clear();
+        }
+
+        private void Button_Click_Clear_All(object sender, RoutedEventArgs e)
+        {
+            argumentOne = double.NaN; 
+            argumentTwo = double.NaN;
+            txtBox.Clear();
             lableMain.Content = "";
         }
 
@@ -107,30 +114,39 @@ namespace BasecEngineeringCalculator.Pages
 
         private void Button_Click_Equls(object sender, RoutedEventArgs e)
         {
-            argumentTwo = double.Parse(txtBox.Text);
+            if (txtBox.Text == "")
+            {
+                lableMain.Content = "Нету аргументов";
+            }
+            else
+            {
+                argumentTwo = double.Parse(txtBox.Text);
+            }
 
             switch (sign)
             {
                 case '/':
                     result = argumentOne / argumentTwo;
-                    txtBox.Text = result.ToString();
+                    txtBox.Text = result.ToString(/*"F3"*/);
                     break;
 
                 case '*':
                     result = argumentOne * argumentTwo;
-                    txtBox.Text = result.ToString();
+                    txtBox.Text = result.ToString(/*"F3"*/);
                     break;
 
                 case '-':
                     result = argumentOne - argumentTwo;
-                    txtBox.Text = result.ToString();
+                    txtBox.Text = result.ToString(/*"F3"*/);
                     break;
 
                 case '+':
                     result = argumentOne + argumentTwo;
-                    txtBox.Text = result.ToString();
+                    txtBox.Text = result.ToString(/*"F3"*/);
                     break;
             }
         }
+
+
     }
 }
