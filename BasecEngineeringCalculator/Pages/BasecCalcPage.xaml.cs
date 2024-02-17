@@ -1,18 +1,5 @@
-﻿using BasecEngineeringCalculator.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BasecEngineeringCalculator.Pages
 {
@@ -45,7 +32,7 @@ namespace BasecEngineeringCalculator.Pages
 
         private void Button_Click_Clear_All(object sender, RoutedEventArgs e)
         {
-            argumentOne = double.NaN; 
+            argumentOne = double.NaN;
             argumentTwo = double.NaN;
             txtBox.Clear();
             lableMain.Content = "";
@@ -114,39 +101,30 @@ namespace BasecEngineeringCalculator.Pages
 
         private void Button_Click_Equls(object sender, RoutedEventArgs e)
         {
-            if (txtBox.Text == "")
-            {
-                lableMain.Content = "Нету аргументов";
-            }
-            else
-            {
-                argumentTwo = double.Parse(txtBox.Text);
-            }
+            lableMain.Content = txtBox.Text == "" ? "Нету аргументов" : argumentTwo = double.Parse(txtBox.Text);
 
             switch (sign)
             {
                 case '/':
                     result = argumentOne / argumentTwo;
-                    txtBox.Text = result.ToString(/*"F3"*/);
+                    txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
                     break;
 
                 case '*':
                     result = argumentOne * argumentTwo;
-                    txtBox.Text = result.ToString(/*"F3"*/);
+                    txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
                     break;
 
                 case '-':
                     result = argumentOne - argumentTwo;
-                    txtBox.Text = result.ToString(/*"F3"*/);
+                    txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
                     break;
 
                 case '+':
                     result = argumentOne + argumentTwo;
-                    txtBox.Text = result.ToString(/*"F3"*/);
+                    txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
                     break;
             }
         }
-
-
     }
 }
