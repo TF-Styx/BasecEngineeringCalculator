@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" 
         Closing="Window_Closing"
-        Height="660" Width="400" 
-        MinHeight="400" MinWidth="200"
+        Height="660" Width="600" 
+        MinHeight="660" MinWidth="600"
         WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.RowDefinitions>
@@ -27,6 +27,6 @@
             </MenuItem>
         </Menu>
 
-        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Source="/Pages/BasecCalcPage.xaml"/>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Source="/Pages/EngineeringCalcPage.xaml"/>
     </Grid>
 </Window>

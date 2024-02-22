@@ -29,10 +29,10 @@
         <CheckBox Grid.ColumnSpan="4" Grid.Row="0" x:Name="checkBoxRounding" Content="Округлить до десятичных"/>
 
         <Label Grid.ColumnSpan="4" Grid.Row="1" Name="lableMain" 
-               HorizontalAlignment="Right" FontSize="30"/>
+               HorizontalAlignment="Right" FontSize="20"/>
 
         <TextBox Grid.ColumnSpan="4" Grid.Row="2" Name="txtBox" 
-                 FontSize="50" TextAlignment="Right"
+                 FontSize="30" TextAlignment="Right"
                  TextWrapping="Wrap" IsReadOnly="True" BorderThickness="0"/>
 
         <Button Grid.Column="1" Grid.Row="7" Content="0" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>

@@ -78,6 +78,8 @@ namespace BasecEngineeringCalculator.Pages
                 case "-":
                     try
                     {
+                        if (txtBox.Text == "") txtBox.Text += "-";
+
                         argumentOne = double.Parse(txtBox.Text);
                         txtBox.Text = string.Empty;
                         lableMain.Content = argumentOne + "-";
@@ -108,21 +110,25 @@ namespace BasecEngineeringCalculator.Pages
                 case '/':
                     result = argumentOne / argumentTwo;
                     txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
+                    lableMain.Content = $"{argumentOne} / {argumentTwo} = ";
                     break;
 
                 case '*':
                     result = argumentOne * argumentTwo;
                     txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
+                    lableMain.Content = $"{argumentOne} * {argumentTwo} = ";
                     break;
 
                 case '-':
                     result = argumentOne - argumentTwo;
                     txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
+                    lableMain.Content = $"{argumentOne} - {argumentTwo} = ";
                     break;
 
                 case '+':
                     result = argumentOne + argumentTwo;
                     txtBox.Text = checkBoxRounding.IsChecked == true ? result.ToString("F2") : result.ToString("F0");
+                    lableMain.Content = $"{argumentOne} + {argumentTwo} = ";
                     break;
             }
         }
